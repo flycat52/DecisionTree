@@ -1,0 +1,114 @@
+Reading training data from file hepatitis-training.dat
+2 categories 
+17 attributes 
+Read 110 instances 
+
+Reading test data from file hepatitis-test.dat
+Read 27 instances 
+21 correct out of 27
+
+Accuracy: 
+Decision Tree Accuracy: 77.78%.
+Baseline Accuracy (live): 85.19%.
+
+Apply decision tree classifier to 10 pairs of training/test files:
+31 correct out of 37
+Accuracy of run 1 is: 83.78%.
+
+31 correct out of 37
+Accuracy of run 2 is: 83.78%.
+
+30 correct out of 37
+Accuracy of run 3 is: 81.08%.
+
+28 correct out of 37
+Accuracy of run 4 is: 75.68%.
+
+28 correct out of 37
+Accuracy of run 5 is: 75.68%.
+
+25 correct out of 37
+Accuracy of run 6 is: 67.57%.
+
+31 correct out of 37
+Accuracy of run 7 is: 83.78%.
+
+25 correct out of 37
+Accuracy of run 8 is: 67.57%.
+
+28 correct out of 37
+Accuracy of run 9 is: 75.68%.
+
+29 correct out of 37
+Accuracy of run 10 is: 78.38%.
+
+The average accuracy of the classifiers over the 10 trials is: 77.3%.
+
+Decision Tree constructed: 
+	ASCITES = True: 
+		SPIDERS = True: 
+			VARICES = True: 
+				ANTIVIRALS = True: 
+					('live', 50)
+				ANTIVIRALS = False: 
+					MALAISE = True: 
+						('live', 8)
+					MALAISE = False: 
+						STEROID = True: 
+							('live', 2)
+						STEROID = False: 
+							ANOREXIA = True: 
+								FIRMLIVER = True: 
+									('live', 1)
+								FIRMLIVER = False: 
+									('die', 1)
+							ANOREXIA = False: 
+								('live', 1)
+			VARICES = False: 
+				('die', 1)
+		SPIDERS = False: 
+			SGOT = True: 
+				BIGLIVER = True: 
+					STEROID = True: 
+						ANTIVIRALS = True: 
+							('die', 1)
+						ANTIVIRALS = False: 
+							('live', 1)
+					STEROID = False: 
+						('live', 2)
+				BIGLIVER = False: 
+					('die', 3)
+			SGOT = False: 
+				FIRMLIVER = True: 
+					ANOREXIA = True: 
+						AGE = True: 
+							('live', 1)
+						AGE = False: 
+							('die', 3)
+					ANOREXIA = False: 
+						('live', 2)
+				FIRMLIVER = False: 
+					('live', 8)
+	ASCITES = False: 
+		BIGLIVER = True: 
+			VARICES = True: 
+				FIRMLIVER = True: 
+					STEROID = True: 
+						('die', 3)
+					STEROID = False: 
+						ANOREXIA = True: 
+							AGE = True: 
+								SPIDERS = True: 
+									('live', 1)
+								SPIDERS = False: 
+									('die', 1)
+							AGE = False: 
+								('die', 1)
+						ANOREXIA = False: 
+							('live', 2)
+				FIRMLIVER = False: 
+					('live', 1)
+			VARICES = False: 
+				('die', 5)
+		BIGLIVER = False: 
+			('live', 1)
